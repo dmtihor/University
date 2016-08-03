@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/University.Wcf.Entity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/University.Wcf.Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/University.Wcf/LecturerService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/University.Db.Entity" />
+  <xs:complexType name="ArrayOfLecturerWcf">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LecturerWcf" nillable="true" type="tns:LecturerWcf" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLecturerWcf" nillable="true" type="tns:ArrayOfLecturerWcf" />
+  <xs:complexType name="LecturerWcf">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LecturerAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LecturerAge" type="xs:int" />
+      <xs:element minOccurs="0" name="LecturerId" type="xs:int" />
+      <xs:element minOccurs="0" name="LecturerName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/University.Db.Entity" minOccurs="0" name="Seminars" nillable="true" type="q1:ArrayOfSeminar" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LecturerWcf" nillable="true" type="tns:LecturerWcf" />
+  <xs:complexType name="ArrayOfSeminarWcf">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SeminarWcf" nillable="true" type="tns:SeminarWcf" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSeminarWcf" nillable="true" type="tns:ArrayOfSeminarWcf" />
+  <xs:complexType name="SeminarWcf">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/University.Db.Entity" minOccurs="0" name="Lecturers" nillable="true" type="q2:ArrayOfLecturer" />
+      <xs:element minOccurs="0" name="SeminarId" type="xs:int" />
+      <xs:element minOccurs="0" name="SeminarName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SeminarTime" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SeminarWcf" nillable="true" type="tns:SeminarWcf" />
+</xs:schema>

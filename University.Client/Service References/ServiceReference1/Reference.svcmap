@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c346c089-a7c5-4d90-9b4e-9d34d35a5cc0" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/University.Wcf/LecturerService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LecturerService.wsdl" MetadataType="Wsdl" ID="f8eb0d50-97cc-418f-a0d7-85c1d11348de" SourceId="1" SourceUrl="http://localhost/University.Wcf/LecturerService.svc?wsdl" />
+    <MetadataFile FileName="LecturerService.xsd" MetadataType="Schema" ID="4386e552-39da-4555-9242-328a8f9e6806" SourceId="1" SourceUrl="http://localhost/University.Wcf/LecturerService.svc?xsd=xsd0" />
+    <MetadataFile FileName="LecturerService1.xsd" MetadataType="Schema" ID="60608fcd-fd0e-42ee-9db0-00c1f1d17805" SourceId="1" SourceUrl="http://localhost/University.Wcf/LecturerService.svc?xsd=xsd3" />
+    <MetadataFile FileName="LecturerService2.xsd" MetadataType="Schema" ID="f34e0d64-d689-43a1-a723-4de8fc391cb7" SourceId="1" SourceUrl="http://localhost/University.Wcf/LecturerService.svc?xsd=xsd1" />
+    <MetadataFile FileName="LecturerService.disco" MetadataType="Disco" ID="7996a3cf-9ba8-420a-945d-da58032c8c33" SourceId="1" SourceUrl="http://localhost/University.Wcf/LecturerService.svc?disco" />
+    <MetadataFile FileName="LecturerService3.xsd" MetadataType="Schema" ID="6039f164-b75f-4acb-953e-cb5520b9966d" SourceId="1" SourceUrl="http://localhost/University.Wcf/LecturerService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

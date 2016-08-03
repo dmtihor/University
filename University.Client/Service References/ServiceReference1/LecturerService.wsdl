@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LecturerService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/University.Wcf/LecturerService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/University.Wcf/LecturerService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/University.Wcf/LecturerService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/University.Wcf.Entity" />
+      <xsd:import schemaLocation="http://localhost/University.Wcf/LecturerService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/University.Db.Entity" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ILecturerService_GetAllLecturers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLecturers" />
+  </wsdl:message>
+  <wsdl:message name="ILecturerService_GetAllLecturers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLecturersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILecturerService_AddLecturer_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddLecturer" />
+  </wsdl:message>
+  <wsdl:message name="ILecturerService_AddLecturer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddLecturerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILecturerService_GetLecturerById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLecturerById" />
+  </wsdl:message>
+  <wsdl:message name="ILecturerService_GetLecturerById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLecturerByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILecturerService_RemoveLecturer_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveLecturer" />
+  </wsdl:message>
+  <wsdl:message name="ILecturerService_RemoveLecturer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemoveLecturerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILecturerService_UpdateLecturer_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLecturer" />
+  </wsdl:message>
+  <wsdl:message name="ILecturerService_UpdateLecturer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLecturerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ILecturerService_GetSeminars_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSeminars" />
+  </wsdl:message>
+  <wsdl:message name="ILecturerService_GetSeminars_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSeminarsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ILecturerService">
+    <wsdl:operation name="GetAllLecturers">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILecturerService/GetAllLecturers" message="tns:ILecturerService_GetAllLecturers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILecturerService/GetAllLecturersResponse" message="tns:ILecturerService_GetAllLecturers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLecturer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILecturerService/AddLecturer" message="tns:ILecturerService_AddLecturer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILecturerService/AddLecturerResponse" message="tns:ILecturerService_AddLecturer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLecturerById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILecturerService/GetLecturerById" message="tns:ILecturerService_GetLecturerById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILecturerService/GetLecturerByIdResponse" message="tns:ILecturerService_GetLecturerById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemoveLecturer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILecturerService/RemoveLecturer" message="tns:ILecturerService_RemoveLecturer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILecturerService/RemoveLecturerResponse" message="tns:ILecturerService_RemoveLecturer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLecturer">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILecturerService/UpdateLecturer" message="tns:ILecturerService_UpdateLecturer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILecturerService/UpdateLecturerResponse" message="tns:ILecturerService_UpdateLecturer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSeminars">
+      <wsdl:input wsaw:Action="http://tempuri.org/ILecturerService/GetSeminars" message="tns:ILecturerService_GetSeminars_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ILecturerService/GetSeminarsResponse" message="tns:ILecturerService_GetSeminars_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ILecturerService" type="tns:ILecturerService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetAllLecturers">
+      <soap:operation soapAction="http://tempuri.org/ILecturerService/GetAllLecturers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLecturer">
+      <soap:operation soapAction="http://tempuri.org/ILecturerService/AddLecturer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLecturerById">
+      <soap:operation soapAction="http://tempuri.org/ILecturerService/GetLecturerById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemoveLecturer">
+      <soap:operation soapAction="http://tempuri.org/ILecturerService/RemoveLecturer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLecturer">
+      <soap:operation soapAction="http://tempuri.org/ILecturerService/UpdateLecturer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSeminars">
+      <soap:operation soapAction="http://tempuri.org/ILecturerService/GetSeminars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LecturerService">
+    <wsdl:port name="BasicHttpBinding_ILecturerService" binding="tns:BasicHttpBinding_ILecturerService">
+      <soap:address location="http://localhost/University.Wcf/LecturerService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
